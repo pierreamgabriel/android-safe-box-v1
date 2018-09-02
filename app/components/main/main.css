@@ -1,0 +1,12 @@
+#main-title {
+font-size: 20vw;
+font-weight: bold;
+text-align: center;
+margin-bottom: 10px;    
+}
+.actionbar {
+color: #26abe2;    
+}
+.scroll{
+vertical-align: middle;   
+}

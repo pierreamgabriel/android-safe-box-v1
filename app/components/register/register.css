@@ -1,0 +1,35 @@
+Page {
+background-color: #26abe2;    
+}
+.stackLayout {
+background-color: #26abe2;
+color: white;
+border-radius: 0px;  
+vertical-align: middle;    
+}
+Image {
+//margin-bottom: 60px;    
+}
+.label {
+//font-weight: bold;   
+text-align: center; 
+width: 80%;   
+font-family: WorkSansMedium;      
+}
+WebView {  
+//font-family: WorkSans-Regular; 
+background-color: #26abe2; 
+height: 100%;
+width: 100%;
+}
+.textfield {
+background-color: white; 
+color: black;    
+border-radius: 10px;    
+width: 80%;    
+}
+.btn-outline {
+border-color: white; 
+color: white;    
+width: 80%;    
+}

@@ -1,0 +1,12 @@
+<Page navigatingTo="onNavigatingTo" xmlns:actionBar="/actionBar">
+    <ActionBar class="actionbar" title="View, edit or delete">
+  <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack"></NavigationButton>
+</ActionBar>
+<StackLayout class="login-wrapper">
+    <TextField text="{{website2}}" />
+    <TextField text="{{username2}}" />
+    <TextField text="{{password2}}" />
+    <Button class="btn btn-outline btn-rounded-sm" rowId="{{rowId2}}" website="{{website2}}" username="{{username2}}" password="{{password2}}" text="Save changes" tap="editData" />
+    <Button class="btn btn-outline btn-rounded-sm" rowId="{{rowId2}}"  text="Delete data" tap="deleteData" />
+    </StackLayout>
+</Page>

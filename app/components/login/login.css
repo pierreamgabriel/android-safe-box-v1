@@ -1,0 +1,24 @@
+Page {
+background-color: #26abe2;    
+}
+.stackLayout {
+background-color: #26abe2;
+color: white;
+border-radius: 0px;  
+vertical-align: middle;    
+}
+.label {
+text-align: center; 
+width: 80%;   
+font-family: WorkSansBold;      
+}
+.textfield {
+background-color: white;  
+border-radius: 10px;    
+width: 80%;    
+}
+.btn-outline {
+border-color: white; 
+color: white;    
+width: 80%;    
+}

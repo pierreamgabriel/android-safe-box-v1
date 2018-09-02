@@ -1,0 +1,14 @@
+<Page loaded="loaded">
+<ActionBar class="actionbar" title="Android Safe Box">
+</ActionBar>    
+<ScrollView  orientation="vertical">
+<GridLayout class="scroll" rows="auto, auto, auto, auto" columns="*, *" > 
+<Image id="personalDoc" src="~/images/personaldocs.png" row="1" col="0" tap="goTo"></Image>    
+<Image id="note" src="~/images/note.png" row="1" col="1" tap="goTo"></Image>
+<Image id="password" src="~/images/password.png" row="2" col="0" tap="goTo"></Image>
+<Image id="webLogin" src="~/images/login.png" row="2" col="1" tap="goTo"></Image>
+<Image id="creditCard" src="~/images/credit-card.png" row="3" col="0" tap="goTo"></Image>
+<Image id="bank" src="~/images/bank.png" row="3" col="1" tap="goTo"></Image>    
+</GridLayout>        
+    </ScrollView>
+</Page>

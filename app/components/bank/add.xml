@@ -1,0 +1,14 @@
+<Page navigatingTo="onNavigatingTo" xmlns:actionBar="/actionBar">
+    <ActionBar class="actionbar" title="Add a bank">
+  <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" tap="goBack"></NavigationButton>
+</ActionBar>
+<StackLayout class="login-wrapper">
+    <TextField text="{{bankName}}" hint="Bank name" />
+    <TextField text="{{bankAccount}}" hint="Account number" />
+    <TextField text="{{bankPass}}" hint="Password" />
+    <TextField text="{{bankOther}}" hint="Other info" />
+    <Button class="btn btn-outline btn-rounded-sm" text="Save" tap="{{bank}}" />
+    <Label row="2" col="0" text="Go Back" class="go-back" textWrap="true" tap="goBack" /> 
+    </StackLayout>
+</Page>
+

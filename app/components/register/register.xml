@@ -1,0 +1,13 @@
+<Page navigatingTo="onNavigatingTo" actionBarHidden = "true" loaded="loaded">
+<ScrollView  orientation="vertical">    
+<StackLayout class="login-wrapper stackLayout">
+<Label />    
+<Image style="width:130px" src="~/images/icon.png" />         
+<TextField class="textfield" secure="true" text="{{ key }}" hint="Password" />
+<TextField class="textfield" secure="true" text="{{ confirmKey }}" hint="Confirm password" />    
+<StackLayout class="hr-light m-b-10" android:visibility="collapsed" />    
+<Button text="GO" tap="openDB" class="btn btn-outline btn-rounded-sm"/>    
+    </StackLayout>
+    </ScrollView>
+    
+</Page>
