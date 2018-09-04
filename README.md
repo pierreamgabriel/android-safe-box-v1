@@ -7,8 +7,8 @@ The SQLCipher database used in this project encrypts its data with 256-bit AES. 
 
 ## Screenshots
 <p align="center">
-<img src="https://raw.githubusercontent.com/pierremacedo/android-safe-box-v1/master/screenshots/splashscreen.png" height="350" title="splash screen">
-<img src="https://raw.githubusercontent.com/pierremacedo/android-safe-box-v1/master/screenshots/registerscreen.png" height="350" title="register screen">
-<img src="https://raw.githubusercontent.com/pierremacedo/android-safe-box-v1/master/screenshots/loginscreen.png" height="350" title="login screen">  
-<img src="https://raw.githubusercontent.com/pierremacedo/android-safe-box-v1/master/screenshots/mainscreen.png" height="350" title="main screen">  
+<img src="https://raw.githubusercontent.com/pierremacedo/practical-tarot-reading/master/screenshots/splashscreen.png" height="350" title="splash screen">
+<img src="https://raw.githubusercontent.com/pierremacedo/practical-tarot-reading/master/screenshots/quicknotes.png" height="350" title="quick notes">
+<img src="https://raw.githubusercontent.com/pierremacedo/practical-tarot-reading/master/screenshots/instructions.png" height="350" title="instructions">  
+<img src="https://raw.githubusercontent.com/pierremacedo/practical-tarot-reading/master/screenshots/results.png" height="350" title="results">  
 </p>
