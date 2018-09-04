@@ -3,7 +3,7 @@ NOTE: No apk file will be provided for the version 1 (v1) of this app due to slo
 
 This app as its name implies is a place to store sensitive information such as bank accounts, credit cards, personal documents, etc., on android devices. 
 ## Security
-The SQLCipher database used in this project encrypts its data with 256-bit AES. The encryption method consists of generating a strong key from a ten characters password provided by the user. Neither the user's password nor the encryption key are stored on the device permanently. The key is temporally stored on the device using this secure module created by myself https://github.com/pierremacedo/nativescript-temporary-key-storage.
+The SQLCipher database used in this project encrypts its data with 256-bit AES. A 512-bit encryption key is generated from a ten characters password provided by the user. This key is temporally stored on the device using this secure module created by myself https://github.com/pierremacedo/nativescript-temporary-key-storage.
 
 ## Screenshots
 <p align="center">
