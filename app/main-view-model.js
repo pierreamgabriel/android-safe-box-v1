@@ -1,7 +1,7 @@
-let Observable = require("data/observable").Observable;
-let Sqlite = require("nativescript-sqlcipher");
-let dialog = require("ui/dialogs");
-let frameModule = require("ui/frame");
+const Observable = require("data/observable").Observable;
+const Sqlite = require("nativescript-sqlcipher");
+const dialog = require("ui/dialogs");
+const frameModule = require("ui/frame");
 
 
 function createViewModel(db) {
@@ -41,7 +41,7 @@ function createViewModel(db) {
         dialog.alert({title:"", message:"The website field is required.", okButtonText:"OK"});    
         }else {
         db.execSQL("INSERT INTO website (site, username, password) VALUES (?, ?, ?)", [this.siteName, this.siteUser, this.sitePass]).then(id => {
-            dialog.alert({title: "",message: "Data added Successfully",okButtonText: "Ok"}).then(function(){
+            dialog.alert({title: "",message: "Data added successfully.",okButtonText: "Ok"}).then(function(){
         frameModule.topmost().navigate("components/website/website");    
         });
         }, error => {
@@ -55,7 +55,7 @@ function createViewModel(db) {
         dialog.alert({title:"", message:"The name field is required.", okButtonText:"OK"});    
         }else {
         db.execSQL("INSERT INTO other_passwords (name, password, other_info) VALUES (?, ?, ?)", [this.otherName, this.otherPass, this.otherInfo]).then(id => {
-             dialog.alert({title: "",message: "Data Added Successfully",okButtonText: "OK"}).then(function(){
+             dialog.alert({title: "",message: "Data added successfully.",okButtonText: "OK"}).then(function(){
         frameModule.topmost().navigate("components/password/password");    
         });         
         }, error => {
@@ -69,7 +69,7 @@ function createViewModel(db) {
         dialog.alert({title:"", message:"The bank field is required.", okButtonText:"OK"});    
         }else {
         db.execSQL("INSERT INTO bank_account (bank_name, account_number, password, other_info) VALUES (?, ?, ?, ?)", [this.bankName, this.bankAccount, this.bankPass, this.bankOther]).then(id => {
-             dialog.alert({title: "",message: "Data Added Successfully",okButtonText: "OK"}).then(function(){
+             dialog.alert({title: "",message: "Data added successfully.",okButtonText: "OK"}).then(function(){
         frameModule.topmost().navigate("components/bank/bank");
         });         
         }, error => {
@@ -83,7 +83,7 @@ function createViewModel(db) {
         dialog.alert({title:"", message:"The brand field is required.", okButtonText:"OK"});    
         }else {
         db.execSQL("INSERT INTO credit_card (brand, number, verification, expiration_date, password) VALUES (?, ?, ?, ?, ?)", [this.ccBrand, this.ccNumber, this.ccVerification, this.ccEpiration, this.ccPass]).then(id => {
-             dialog.alert({title: "",message: "Data Added Successfully",okButtonText: "OK"}).then(function(){
+             dialog.alert({title: "",message: "Data added successfully.",okButtonText: "OK"}).then(function(){
         frameModule.topmost().navigate("components/creditcard/creditcard");
         });         
         }, error => {
@@ -95,11 +95,9 @@ function createViewModel(db) {
     viewModel.documents = function() {
         if(viewModel.docType.length === 0){
         dialog.alert({title:"", message:"The type field is required.", okButtonText:"OK"});    
-        }else {
-        db.begin();    
+        }else {   
         db.execSQL("INSERT INTO documents (type, number, issue_date, expiration_date, other_info) VALUES (?, ?, ?, ?, ?)", [this.docType, this.docNumber, this.docIssue, this.docExpiration, this.docOther]).then(id => {
-             db.commit();
-             dialog.alert({title: "",message: "Data Added Successfully",okButtonText: "OK"}).then(function(){
+             dialog.alert({title: "",message: "Data added successfully.",okButtonText: "OK"}).then(function(){
         frameModule.topmost().navigate("components/document/document");
         });         
         }, error => {
@@ -110,7 +108,7 @@ function createViewModel(db) {
     
     viewModel.notes = function() {
         db.execSQL("INSERT INTO notes (note) VALUES (?)", [this.note]).then(id => {
-             dialog.alert({title: "",message: "Data Added Successfully",okButtonText: "OK"}).then(function(){
+             dialog.alert({title: "",message: "Data added successfully.",okButtonText: "OK"}).then(function(){
         frameModule.topmost().navigate("components/notes/notes");
         });         
         }, error => {
@@ -129,7 +127,7 @@ function createViewModel(db) {
                 viewModel.websiteResults.push({id: rows[row][0], site: rows[row][1], username: rows[row][2], password: rows[row][3]});
             }
         }, (e) => {
-            alert(e);
+            console.log(e);
         });
     }
     
@@ -142,7 +140,7 @@ function createViewModel(db) {
                 viewModel.otherPassResults.push({id: rows[row][0], name: rows[row][1], password: rows[row][2], other_info: rows[row][3]});
             }
         }, (error) => {
-            alert("SELECT ERROR", error);
+            console.log(e);
         });
     }
     
@@ -155,7 +153,7 @@ function createViewModel(db) {
                 viewModel.bankResults.push({id: rows[row][0], bank_name: rows[row][1], account_number: rows[row][2], password: rows[row][3], other_info:rows[row][4] });
             }
         }, (error) => {
-            alert("SELECT ERROR", error);
+            console.log(e);
         });
     }
     
@@ -168,7 +166,7 @@ function createViewModel(db) {
                 viewModel.ccResults.push({id: rows[row][0], brand: rows[row][1], number: rows[row][2], verification: rows[row][3], expiration: rows[row][4], password: rows[row][5]});
             }
         }, (error) => {
-            alert("SELECT ERROR", error);
+            console.log(e);
         });
     }
     
@@ -181,7 +179,7 @@ function createViewModel(db) {
                 viewModel.docResults.push({id: rows[row][0], type: rows[row][1], number: rows[row][2], issue: rows[row][3], expiration: rows[row][4], other: rows[row][5]});
             }
         }, (error) => {
-            alert("SELECT ERROR", error);
+            console.log(e);
         });
         
     }
@@ -195,7 +193,7 @@ function createViewModel(db) {
                 viewModel.noteResults.push({id: rows[row][0], note: rows[row][1]});
             }
         }, (error) => {
-            alert("SELECT ERROR", error);
+            console.log(e);
         });
     }
 

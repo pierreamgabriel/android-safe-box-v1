@@ -1,5 +1,12 @@
 <Page loaded="loaded">
 <ActionBar class="actionbar" title="Android Safe Box">
+<ActionBar.actionItems>                
+                <ActionItem tap="logout">
+                    <ActionItem.actionView>
+                       <Label text="&#xf011;" id="font-awesome"/>
+                    </ActionItem.actionView>
+                </ActionItem>                
+            </ActionBar.actionItems>    
 </ActionBar>    
 <ScrollView  orientation="vertical">
 <GridLayout class="scroll" rows="auto, auto, auto, auto" columns="*, *" > 

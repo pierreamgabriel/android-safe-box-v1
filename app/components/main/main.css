@@ -1,12 +1,11 @@
-#main-title {
-font-size: 20vw;
-font-weight: bold;
-text-align: center;
-margin-bottom: 10px;    
-}
 .actionbar {
-color: #26abe2;    
+color: #26abe2;
+padding-right: 15x;    
 }
 .scroll{
 vertical-align: middle;   
+}
+#font-awesome {
+    font-family: "fa-solid-900";
+    font-size: 25vw;
 }

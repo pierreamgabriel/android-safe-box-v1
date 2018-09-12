@@ -1,9 +1,9 @@
-let application = require("application");
+const application = require("application");
 require("./bundle-config");
 application.run({ moduleName: "app-root" });
 application.setCssFileName("app.css");
-let frame = require('ui/frame');
-let Sqlite = require("nativescript-sqlcipher");
+const frame = require('ui/frame');
+const Sqlite = require("nativescript-sqlcipher");
 
 if (application.android) {
     application.android.on(application.AndroidApplication.activityBackPressedEvent, backEvent);

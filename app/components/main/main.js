@@ -1,8 +1,8 @@
-let Sqlite = require("nativescript-sqlcipher");
-let layout = require("ui/layouts/grid-layout");
-let observableModule = require("data/observable");
-let dialogs = require("ui/dialogs");
-let frameModule = require("ui/frame");
+const Sqlite = require("nativescript-sqlcipher");
+const layout = require("ui/layouts/grid-layout");
+const observableModule = require("data/observable");
+const dialog = require("ui/dialogs");
+const frameModule = require("ui/frame");
 
 
 
@@ -39,4 +39,14 @@ frameModule.topmost().navigate("components/bank/bank")
     break;
         
 }    
+}
+
+exports.logout = function() {
+    let options = {title:"", message:"Do you really want to log out?", okButtonText:"YES", cancelButtonText: "NO"};    
+        dialog.confirm(options).then(function(result){
+        if(result === true) {    
+        Sqlite.deleteDatabase("logged");    
+        frameModule.topmost().navigate({moduleName:"components/login/login", clearHistory: true}); 
+        }
+        });
 }

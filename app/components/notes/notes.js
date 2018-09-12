@@ -1,10 +1,10 @@
-let processDb = require("nativescript-temporary-key-storage").processDb;
-let Sqlite = require("nativescript-sqlcipher");
-let dialog = require("ui/dialogs");
-let Observable = require("data/observable").Observable;
-let createViewModel = require("../../main-view-model").createViewModel;
-let listViewModule = require("ui/list-view");
-let frameModule = require("ui/frame");
+const processDb = require("nativescript-temporary-key-storage").processDb;
+const Sqlite = require("nativescript-sqlcipher");
+const dialog = require("ui/dialogs");
+const Observable = require("data/observable").Observable;
+const createViewModel = require("../../main-view-model").createViewModel;
+const listViewModule = require("ui/list-view");
+const frameModule = require("ui/frame");
 
 
 let rowId = "";
@@ -17,13 +17,14 @@ function onNavigatingTo(args) {
     requestKey.getKey(); 
     setTimeout(function() { 
         mainKey.key = requestKey.returnKey();
-         if (mainKey === undefined){
+         if (mainKey.key === ""){
+        Sqlite.deleteDatabase("logged");     
         let options = {title:"Session expired", message:"You need to login again", okButtonText:"OK"};    
         dialog.alert(options).then(function(){
-        frameModule.topmost().navigate("components/login/login");    
+        frameModule.topmost().navigate({moduleName:"components/login/login", clearHistory: true}); 
         });
     } else {
-        new Sqlite("storage", mainKey).then(db =>{
+        new Sqlite("storage.db", mainKey).then(db =>{
      page.bindingContext = createViewModel(db);});
     }
     },0);    
