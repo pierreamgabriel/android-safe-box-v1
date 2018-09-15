@@ -1,8 +1,8 @@
-.actionbar {
+#font-awesome {
+font-family: "fa-solid-900";
 color: #26abe2;    
-}
-.add-icon {
-width: 80px; 
+font-size: 40px;    
+text-align: center;    
 margin-top: 15px; 
 margin-bottom: 10px;    
 }

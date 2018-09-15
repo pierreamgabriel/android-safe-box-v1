@@ -22,9 +22,9 @@ components that have the btn class name.
 .btn {
     font-size: 18;
 }
-ActionBar {
+.actionbar {
     background-color: white;
-    color: #5973fd;
+    color: #26abe2;
 }
 .back {
 color: white;    

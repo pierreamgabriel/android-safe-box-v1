@@ -15,8 +15,6 @@ function openDB() {
     let derivedKey = sha256(openKey.key).toString();
     let password = {key: derivedKey};
     
-    keyStorage(derivedKey, 9000);
-    
     if (openKey.key.length < 10){
     dialogsModule.alert("Your password must contain at least 10 characters.")    
     } 
@@ -32,6 +30,7 @@ function openDB() {
       db.execSQL('CREATE TABLE IF NOT EXISTS other_passwords (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, password TEXT, other_info TEXT)'); 
       db.execSQL('CREATE TABLE IF NOT EXISTS documents (id INTEGER PRIMARY KEY AUTOINCREMENT, type TEXT, number TEXT, issue_date TEXT, expiration_date TEXT, other_info TEXT)'); 
       db.execSQL('CREATE TABLE IF NOT EXISTS notes (id INTEGER PRIMARY KEY AUTOINCREMENT, note TEXT)').then(id => {
+      keyStorage(derivedKey, 9000);      
       new Sqlite("registered");       
       new Sqlite("logged");       
       page.bindingContext = createViewModel(db);  
