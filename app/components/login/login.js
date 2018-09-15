@@ -1,5 +1,5 @@
 const observableModule = require("data/observable");
-const sha256 = require("crypto-js/sha256");
+const sha512 = require("crypto-js/sha512");
 const keyStorage = require("nativescript-temporary-key-storage").keyStorage;
 const Sqlite = require("nativescript-sqlcipher");
 const dialogsModule = require("ui/dialogs");
@@ -11,7 +11,7 @@ let openKey = new observableModule.fromObject({
 });    
 
 function openDB() {
-    let derivedKey = sha256(openKey.key).toString();
+    let derivedKey = sha512(openKey.key).toString();
     let password = {key: derivedKey};
     
     keyStorage(derivedKey, 9000);
