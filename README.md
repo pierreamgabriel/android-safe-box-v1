@@ -1,7 +1,7 @@
 # Android Safe Box
-A personal project to compare the performances of two app development frameworks on android. This app was built with NativeScript + SQLcipher and will be compared against this one https://github.com/pierremacedo/android-safe-box-v2 built with React Native + Realm.
+A personal project to compare the performances of two app development frameworks on Android. This app was built with NativeScript + SQLcipher and will be compared against this one https://github.com/pierremacedo/android-safe-box-v2 built with React Native + Realm.
 
-This app as its name implies stores sensitive information such as bank accounts, credit cards, personal documents, etc., on android devices. 
+This app as its name implies stores sensitive information such as bank accounts, credit cards, personal documents, etc., on Android devices. 
 
 ## Download
 
@@ -16,13 +16,13 @@ The SQLCipher database encrypts data with 256-bit AES. A 512-bit encryption key 
 I couldn't see any difference here. Both apps start up in an acceptable time.
 
 ### Creating the database
-The first step is to type a ten characters password in order to create a new encrypted database and after that the app automatically navigates to the main screen. This process is slightly faster with NativeScript. 
+The first step is to type a ten characters password in order to create a new encrypted database, and after that, the app automatically navigates to the main screen. This process is slightly faster with NativeScript. 
 
 ### Navigation
 This is a real problem here. Navigating between different screens is considerably slower with NativeScript, but not only that, in my opinion it almost makes the app unusable.
 
 ### Adding, editing and deleting data
-SQLite isn't the fastest database to work with. It wasn't a surprise in my tests its performance was slower than Realm.
+SQLite isn't the fastest database to work with. It wasn't a surprise its performance was slower than Realm in my tests.
 
 ### Conclusion
 React Native certainly allows us to create apps with a smoother navigation which is something really crucial where NativeScript fails. Also, at the moment I created this project, the only suitable database with encryption capability available for NativeScript was SQLcipher, and it's an important downside since Realm is a faster option.
